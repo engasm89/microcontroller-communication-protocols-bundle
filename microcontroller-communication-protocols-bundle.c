@@ -73,9 +73,9 @@ int main(void) { // Begin main function
   unsigned char v = 0; // Prepare variable for I2C read value
   i2c_write(0x50, 0x01, 0xAB); // Write 0xAB to register 0x01 at address 0x50
   i2c_read(0x50, 0x01, &v); // Read from register 0x01 at address 0x50
-  for (int i = 0; i < 3; ++i) { // Loop to emit JSON frames
+  for (int i = 0; i < 6; ++i) { // Loop to emit more JSON frames
     printf("{\"uart_ok\":%d,\"spi_ok\":%d,\"i2c_ok\":%d}\n", uart_ok, spi_ok, i2c_ok); // Print protocol states
-    usleep(400000); // Delay 400 ms
+    usleep(250000); // Delay 250 ms
   } // End loop
   return 0; // Return success
 } // End main
