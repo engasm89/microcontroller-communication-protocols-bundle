@@ -1,3 +1,39 @@
+/*
+ * Course: Microcontroller Communication Protocols Bundle
+ * Platform: Embedded Systems
+ * Author: Ashraf S A AlMadhoun
+ * 
+ * Description:
+ * This code demonstrates the core concepts taught in the "Microcontroller Communication Protocols Bundle" course.
+ * It provides a practical implementation that students can study, modify, and
+ * use as a foundation for their own projects.
+ * 
+ * Learning Objectives:
+ * - Understand the fundamental principles covered in this course
+ * - Practice implementing the concepts with real code
+ * - Build a working example that can be extended
+ * 
+ * Hardware Requirements:
+ * - Development board (Embedded Systems)
+ * - Components as specified in CIRCUIT.md
+ * - USB cable for programming
+ * 
+ * Pin Connections:
+ * Refer to CIRCUIT.md for detailed wiring diagrams and pin assignments.
+ * 
+ * Usage:
+ * 1. Review the code structure and comments
+ * 2. Connect hardware according to CIRCUIT.md
+ * 3. Upload code to your development board
+ * 4. Monitor serial output for debugging
+ * 
+ * Course Link: https://www.udemy.com/course/microcontroller-communication-protocols-bundle/
+ * Repository: https://github.com/engasm89/microcontroller-communication-protocols-bundle
+ * 
+ * Copyright (c) 2025 Ashraf S A AlMadhoun
+ * Licensed under MIT License
+ */
+
 #include <stdio.h> // Include I/O for printing protocol status
 #include <unistd.h> // Include POSIX sleep for timing between frames
 
@@ -61,8 +97,8 @@ int i2c_read(unsigned char addr, unsigned char reg, unsigned char *val) { // Fun
   return 1; // Indicate success
 } // End i2c_read
 
-// Entry point demonstrating bundle of protocols
-int main(void) { // Begin main function
+// Program entry point point demonstrating bundle of protocols
+int main(void) { // Main function implementation function
   printf("Microcontroller Communication Protocols Bundle\n"); // Print title
   uart_init(9600); // Initialize UART at 9600 baud
   spi_init_master(); // Initialize SPI master
@@ -78,5 +114,5 @@ int main(void) { // Begin main function
     usleep(250000); // Delay 250 ms
   } // End loop
   return 0; // Return success
-} // End main
+} // End of main function
 
